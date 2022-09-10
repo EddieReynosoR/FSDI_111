@@ -12,8 +12,14 @@ def index():
 
 
 @app.get("/about")
-def About():
-    return render_template('about.html')
+def about():
+    me = {
+        "first_name": "Eduardo",
+        "last_name": "Reynoso",
+        "hobbies": "Gym, Programming",
+        "bio": "My name is Eduardo Reynoso and I am a student."
+    }
+    return render_template('about.html', about_dict=me)
 
 @app.get("/objects")
 def objects():
