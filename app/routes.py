@@ -24,3 +24,7 @@ def about():
 @app.get("/objects")
 def objects():
     return render_template('objects.html')
+
+@app.get("/classes")
+def classes():
+    return render_template('classes.html')
